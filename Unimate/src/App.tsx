@@ -1,11 +1,11 @@
 import React from 'react'
-import HomePage from './components/homePage'
+import SignUp from './components/sign-up'
 import './App.css'
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <SignUp />
     </div>
   )
 }
