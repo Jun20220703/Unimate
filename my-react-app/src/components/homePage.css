@@ -1,0 +1,475 @@
+/* 웹 스타일 홈페이지 */
+.home-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* 상단 네비게이션 바 */
+.top-nav {
+  background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+  padding: 0 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand .university-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #000;
+  font-weight: 600;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-user .user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.nav-user .user-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.nav-user .user-id {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.nav-user .profile-picture {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-user .avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.settings-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.settings-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* 사용자 정보 카드 */
+.user-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-card .user-details {
+  flex: 1;
+}
+
+.user-card .user-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.user-card .user-id {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.user-card .user-major {
+  font-size: 1rem;
+  color: #888;
+}
+
+.user-card .profile-picture {
+  margin-left: 2rem;
+}
+
+.user-card .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* 콘텐츠 그리드 */
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* 상단 섹션들 (Affiliate discounts + Favorite Forums) */
+.top-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+/* Popular Posts는 전체 너비 */
+.posts-section {
+  width: 100%;
+}
+
+/* 섹션 공통 스타일 */
+.affiliate-section,
+.forums-section,
+.posts-section {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.affiliate-section:hover,
+.forums-section:hover,
+.posts-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 1.5rem 0;
+  color: #333;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.view-more {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.view-more:hover {
+  color: #ff5252;
+}
+
+/* Affiliate discounts 아이콘 */
+.discount-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.discount-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.discount-icon:hover {
+  background-color: #e9ecef;
+  border-color: #ffb6c1;
+  transform: translateY(-2px);
+}
+
+.discount-icon .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.discount-icon .icon-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #666;
+  text-align: center;
+}
+
+/* 포럼/게시물 리스트 */
+.forum-list,
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.forum-item,
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.forum-item:hover,
+.post-item:hover {
+  background-color: #e9ecef;
+  transform: translateX(4px);
+}
+
+.forum-content,
+.post-content {
+  flex: 1;
+}
+
+.forum-name,
+.post-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.forum-desc,
+.post-desc {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.badge {
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav-menu {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .top-nav {
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 70px;
+  }
+  
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .nav-link {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .user-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .user-card .profile-picture {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  
+  .discount-icons {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  
+  .discount-icon {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-nav {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+  }
+  
+  .nav-brand {
+    margin-bottom: 1rem;
+  }
+  
+  .nav-user {
+    order: 2;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .main-content {
+    padding: 0.5rem;
+  }
+  
+  .user-card,
+  .affiliate-section,
+  .forums-section,
+  .posts-section {
+    padding: 1rem;
+  }
+  
+  .discount-icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 스크롤바 스타일링 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 애니메이션 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.affiliate-section,
+.forums-section,
+.posts-section,
+.user-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.forum-item,
+.post-item {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* 포커스 스타일 */
+.nav-link:focus,
+.discount-icon:focus,
+.forum-item:focus,
+.post-item:focus {
+  outline: 2px solid #ffb6c1;
+  outline-offset: 2px;
+}
