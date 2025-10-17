@@ -92,38 +92,6 @@ const SignIn: React.FC = () => {
               SIGN IN
             </button>
 
-            {/* 구분선 */}
-            <div className="divider">
-              <div className="divider-line"></div>
-              <span className="divider-text">OR</span>
-              <div className="divider-line"></div>
-            </div>
-
-            {/* 소셜 로그인 버튼들 */}
-            <div className="social-login">
-              <button 
-                type="button" 
-                className="social-button"
-                onClick={() => handleSocialLogin('google')}
-              >
-                G
-              </button>
-              <button 
-                type="button" 
-                className="social-button"
-                onClick={() => handleSocialLogin('facebook')}
-              >
-                F
-              </button>
-              <button 
-                type="button" 
-                className="social-button"
-                onClick={() => handleSocialLogin('twitter')}
-              >
-                X
-              </button>
-            </div>
-
             {/* 회원가입 링크 */}
             <div className="signin-footer">
               <p>Don't have an account? <Link to="/signup" className="signup-link">Sign up</Link></p>

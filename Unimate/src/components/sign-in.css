@@ -71,6 +71,8 @@
   align-items: center;
   min-height: calc(100vh - 70px);
   padding: 2rem;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 /* 로그인 카드 */
@@ -80,7 +82,7 @@
   padding: 3rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 450px;
+  max-width: 600px;
   text-align: center;
 }
 
