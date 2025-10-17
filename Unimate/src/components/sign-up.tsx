@@ -12,6 +12,12 @@ const SignUp: React.FC = () => {
     confirmPassword: ''
   });
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [emailError, setEmailError] = useState('');
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -19,6 +25,15 @@ const SignUp: React.FC = () => {
       ...prev,
       [name]: value
     }));
+
+    // 이메일 검증
+    if (name === 'email') {
+      if (value && !validateEmail(value)) {
+        setEmailError('Please enter a valid email address.');
+      } else {
+        setEmailError('');
+      }
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -95,10 +110,11 @@ const SignUp: React.FC = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="form-input"
+                className={`form-input ${emailError ? 'form-input-error' : ''}`}
                 placeholder="Enter your email address"
                 required
               />
+              {emailError && <div className="error-message">{emailError}</div>}
             </div>
 
             {/* 학번 필드 */}

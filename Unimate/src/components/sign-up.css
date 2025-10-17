@@ -198,6 +198,20 @@
   outline-offset: 2px;
 }
 
+/* 에러 메시지 스타일 */
+.error-message {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* 에러 상태 입력 필드 */
+.form-input-error {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1) !important;
+}
+
 /* 체크박스 그룹 */
 .form-checkbox-group {
   display: flex;
