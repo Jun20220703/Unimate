@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Navigation from './Navigation';
 import './sign-up.css';
 
 const SignUp: React.FC = () => {
@@ -45,22 +46,7 @@ const SignUp: React.FC = () => {
 
   return (
     <div className="signup-page">
-      {/* 상단 네비게이션 바 */}
-      <nav className="top-nav">
-        <div className="nav-brand">
-          <h1 className="university-title">Help University</h1>
-        </div>
-        <div className="nav-menu">
-          <a href="#" className="nav-link">Home</a>
-          <a href="#" className="nav-link">Calendar</a>
-          <a href="#" className="nav-link">Chat</a>
-          <a href="#" className="nav-link">Search</a>
-          <a href="#" className="nav-link">Analytics</a>
-        </div>
-        <div className="nav-user">
-          <div className="settings-icon">⚙️</div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* 메인 콘텐츠 */}
       <main className="main-content">

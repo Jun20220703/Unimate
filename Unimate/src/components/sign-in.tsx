@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Navigation from './Navigation';
 import './sign-in.css';
 
 const SignIn: React.FC = () => {
@@ -31,22 +32,7 @@ const SignIn: React.FC = () => {
 
   return (
     <div className="signin-page">
-      {/* 상단 네비게이션 바 */}
-      <nav className="top-nav">
-        <div className="nav-brand">
-          <h1 className="university-title">Help University</h1>
-        </div>
-        <div className="nav-menu">
-          <Link to="/home" className="nav-link">Home</Link>
-          <a href="#" className="nav-link">Calendar</a>
-          <a href="#" className="nav-link">Chat</a>
-          <a href="#" className="nav-link">Search</a>
-          <a href="#" className="nav-link">Analytics</a>
-        </div>
-        <div className="nav-user">
-          <div className="settings-icon">⚙️</div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* 메인 콘텐츠 */}
       <main className="main-content">

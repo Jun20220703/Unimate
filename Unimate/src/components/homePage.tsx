@@ -1,32 +1,11 @@
 import React from 'react';
+import Navigation from './Navigation';
 import './homePage.css';
 
 const HomePage: React.FC = () => {
   return (
     <div className="home-page">
-      {/* 상단 네비게이션 바 */}
-      <nav className="top-nav">
-        <div className="nav-brand">
-          <h1 className="university-title">Help University</h1>
-        </div>
-        <div className="nav-menu">
-          <a href="#" className="nav-link active">Home</a>
-          <a href="#" className="nav-link">Calendar</a>
-          <a href="#" className="nav-link">Chat</a>
-          <a href="#" className="nav-link">Search</a>
-          <a href="#" className="nav-link">Analytics</a>
-        </div>
-        <div className="nav-user">
-          <div className="user-info">
-            <span className="user-name">Karina</span>
-            <span className="user-id">B2400566</span>
-          </div>
-          <div className="profile-picture">
-            <div className="avatar">👩</div>
-          </div>
-          <div className="settings-icon">⚙️</div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* 메인 콘텐츠 */}
       <main className="main-content">
