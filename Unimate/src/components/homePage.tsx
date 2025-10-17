@@ -30,22 +30,22 @@ const HomePage: React.FC = () => {
 
       {/* 메인 콘텐츠 */}
       <main className="main-content">
-        {/* 사용자 정보 카드 */}
-        <section className="user-card">
-          <div className="user-details">
-            <div className="user-name">Karina</div>
-            <div className="user-id">B2400566</div>
-            <div className="user-major">Bachelor of Information Technology</div>
-          </div>
-          <div className="profile-picture">
-            <div className="avatar">👩</div>
-          </div>
-        </section>
-
-        {/* 콘텐츠 그리드 */}
+        {/* 콘텐츠 그리드 - 세로 배치 */}
         <div className="content-grid">
-          {/* 상단 섹션들 */}
-          <div className="top-sections">
+          {/* 1. 프로필 컨테이너 (맨 위) */}
+          <section className="user-card">
+            <div className="user-details">
+              <div className="user-name">Karina</div>
+              <div className="user-id">B2400566</div>
+              <div className="user-major">Bachelor of Information Technology</div>
+            </div>
+            <div className="profile-picture">
+              <div className="avatar">👩</div>
+            </div>
+          </section>
+
+          {/* 2. Affiliate discounts + Favorite Forums (가로 배치) */}
+          <div className="middle-sections">
             {/* Affiliate discounts 섹션 */}
             <section className="affiliate-section">
               <h2 className="section-title">Affiliate discounts</h2>
@@ -102,7 +102,7 @@ const HomePage: React.FC = () => {
             </section>
           </div>
 
-          {/* Popular Posts 섹션 (전체 너비) */}
+          {/* 3. Popular Posts 섹션 (맨 밑, 전체 너비) */}
           <section className="posts-section">
             <div className="section-header">
               <h2 className="section-title">Popular Posts</h2>
