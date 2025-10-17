@@ -1,7 +1,7 @@
 /* 로그인 페이지 스타일 */
 .signin-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+  background: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
