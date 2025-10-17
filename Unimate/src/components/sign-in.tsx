@@ -87,10 +87,15 @@ const SignIn: React.FC = () => {
               />
             </div>
 
-            {/* 로그인 버튼 */}
-            <button type="submit" className="signin-button">
-              SIGN IN
-            </button>
+          {/* 로그인 버튼 */}
+          <button type="submit" className="signin-button">
+            SIGN IN
+          </button>
+
+          {/* 비밀번호 찾기 */}
+          <div className="signin-footer" style={{ marginTop: '0.75rem' }}>
+            <p><Link to="/forgot-password" className="signup-link">Forgot password?</Link></p>
+          </div>
 
             {/* 회원가입 링크 */}
             <div className="signin-footer">
